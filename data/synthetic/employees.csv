@@ -1,0 +1,6 @@
+employee_id,name,role,department,clearance_level
+E101,Sarah Connor,Senior Teller,Retail Banking,L2
+E102,Marcus Vance,Compliance Analyst,AML Operations,L3
+E103,Elena Rostova,Account Manager,Private Wealth,L2
+E104,David Miller,IT System Admin,Core Systems,L4
+E105,Priya Sharma,Risk Officer,Financial Crime,L3

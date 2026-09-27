@@ -1,0 +1,35 @@
+# Environment and Secrets
+.env
+.env.local
+.env.*.local
+*.pem
+
+# Dependencies
+node_modules/
+.venv/
+venv/
+ENV/
+env/
+
+# Data & Database
+data/raw/
+data/uploads/
+data/processed/
+*.db
+*.sqlite
+*.sqlite3
+*.db-shm
+*.db-wal
+
+# Build outputs
+dist/
+build/
+*.egg-info/
+__pycache__/
+*.pyc
+
+# IDE / System
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
