@@ -155,3 +155,7 @@ FINTRACE/
 
 - Never commit `.env` or database files (`*.db`, `*.sqlite`) to source control.
 - In production, set `SECRET_KEY` to a cryptographically strong 256-bit secret and restrict `allow_origins` in CORS middleware.
+
+## Contribution
+
+**Bhavikesh** contributed to FINTRACE by improving the project documentation and onboarding guidance. This includes clarifying the platform architecture, core capabilities, local setup workflow, repository structure, and security considerations so that new contributors can understand and run the project more easily.
