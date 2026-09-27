@@ -102,6 +102,14 @@ The frontend will be available at `http://localhost:5173` and the backend API do
 - **Username**: `admin`
 - **Password**: `test123` (or configured via `DEFAULT_ADMIN_PASSWORD` in `.env`)
 
+### 6. Pipeline Verification (Optional)
+Run the end-to-end test suite to verify database initialization, authentication hashing, and risk detection pipeline:
+```bash
+cd backend
+python test_e2e_pipeline.py
+```
+You can also upload `sample_transactions.csv` directly via the web UI to test dataset ingestion.
+
 ---
 
 ## 📁 Repository Structure
@@ -112,11 +120,17 @@ FINTRACE/
 │   ├── app/
 │   │   ├── api/             # FastAPI Routers (auth, investigations, cases, signals, report)
 │   │   ├── core/            # Configuration & security utilities
+│   │   ├── correlation/     # Signal correlation & case clustering engine
 │   │   ├── database/        # Database initialization & session management
+│   │   ├── detection/       # Rule engine & Isolation Forest anomaly detection
+│   │   ├── graph/           # Entity graph builder & network analysis
 │   │   ├── models/          # SQLAlchemy ORM models
-│   │   └── pipeline/        # Ingestion, validation, rule engine, ML & correlation
-│   ├── requirements.txt
-│   └── cleanup_db.py        # Database utility script
+│   │   ├── schemas/         # Pydantic validation schemas
+│   │   ├── services/        # Investigation pipeline & ingestion service
+│   │   └── utils/           # Utility helpers
+│   ├── cleanup_db.py        # Database utility script
+│   ├── requirements.txt     # Python dependencies
+│   └── test_e2e_pipeline.py # End-to-end pipeline verification script
 ├── frontend/
 │   ├── src/
 │   │   ├── components/      # UI, Cases, Graph, Timeline, Signals, Entity Inspector
@@ -127,6 +141,9 @@ FINTRACE/
 │   ├── index.html
 │   ├── package.json
 │   └── vite.config.ts
+├── data/                    # Storage for raw, processed, and uploaded datasets
+├── docs/                    # Architecture and project documentation
+├── sample_transactions.csv  # Sample dataset for demonstration and testing
 ├── .env.example
 ├── .gitignore
 └── README.md
