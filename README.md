@@ -157,6 +157,7 @@ FINTRACE/
 
 ## 🔒 Security & Deployment Notes
 
+- The default `admin` / `test123` credentials are for local demos only; set `DEFAULT_ADMIN_PASSWORD` in `backend/.env` before sharing or deploying the application.
 - Never commit `.env` or database files (`*.db`, `*.sqlite`) to source control.
 - In production, set `SECRET_KEY` to a cryptographically strong 256-bit secret and restrict `allow_origins` in CORS middleware.
 
