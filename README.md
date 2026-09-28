@@ -70,9 +70,13 @@ Financial Dataset (CSV / IBM AML)
 - Node.js 18+ and npm
 
 ### 2. Environment Configuration
-Copy `.env.example` to `.env` and configure your credentials:
+The backend loads `.env` from its working directory, so copy the example into `backend/.env` from the repository root and configure your credentials:
 ```bash
-cp .env.example .env
+# Windows PowerShell
+Copy-Item .env.example backend/.env
+
+# Linux/macOS
+cp .env.example backend/.env
 ```
 
 ### 3. Backend Setup
